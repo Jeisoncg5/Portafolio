@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu Nombre — Portafolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<nav>
+  <a href="#home" class="nav-logo">Jeison Cristancho</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">Sobre mí</a></li>
+    <li><a href="#projects">Proyectos</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">Desarrollador Junior</div>
+      <h1>Hola, soy<br><span class="name-accent">Jeison Cristancho</span></h1>
+      <p class="hero-desc">
+        Construyo experiencias digitales limpias, rápidas y funcionales. Apasionado por el código limpio y las soluciones creativas a problemas complejos.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+        <a href="#contact" class="btn btn-secondary">Contactarme</a>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <div class="photo-frame">
+        
+          <img src="/img/ImagenNav.png" alt="Tu Nombre"
+            style="width:100%;height:100%;object-fit:cover;display:block;">
+        <!-- <div class="photo-placeholder-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(167,139,250,0.55)" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg> -->
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SOBRE MÍ — edita textos y cifras
+════════════════════════════════════════ -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label">Sobre mí</div>
+    <div class="section-title">Quién soy</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Soy un desarrollador apasionado con experiencia en construir aplicaciones web y móviles. Me especializo en crear productos que combinan funcionalidad técnica con una gran experiencia de usuario.
+        </p>
+        <p>
+          Cuando no estoy programando, me gusta explorar nuevas tecnologías, contribuir a proyectos open source y aprender constantemente. Creo en el poder del código para solucionar problemas reales.
+        </p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-num">1+</div>
+          <div class="stat-label">Años de experiencia</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">7+</div>
+          <div class="stat-label">Proyectos completados</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Clientes satisfechos</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Tecnologías dominadas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="projects" class="projects-bg">
+<div class="section-inner">
+    <div class="section-label">Proyectos</div>
+    <div class="section-title">Mi trabajo</div>
+    <div class="projects-grid">
+
+    <div class="project-card">
+        <div class="project-num">01</div>
+        <div class="project-title">LuxTime</div>
+        <div class="project-desc">Maqueta estática del sitio corporativo LuxTime en HTML5 + CSS3 (sin JS ni backend).
+        Responsive (3 breakpoints), layout con Flexbox y componentes visuales simulados (slider, timeline, carruseles, zoom).</div>
+        <div class="project-tags">
+            <span class="tag">Html</span>
+            <span class="tag">Css</span>
+            <span class="tag">GitHub</span>
+        </div>
+        <a href="https://github.com/Jeisoncg5/Proyecto--1-Html-Jeison-Cristancho.git" class="project-link">Ver proyecto</a>
+    </div>
+
+    <div class="project-card">
+        <div class="project-num">02</div>
+        <div class="project-title">Hotel El Rincón del Carmen</div>
+        <div class="project-desc">Sitio web responsive para un hotel con tres vistas principales: Inicio (landing), Disponibilidad/Reservas y Contacto/Ubicación, además de un panel Admin. La app permite listar habitaciones, filtrar por fechas/personas, ver detalles en un modal con carrusel de 3 imágenes y gestionar reservas (crear/cancelar) usando json-server como API simulada.</div>
+        <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Html - Css</span>
+            <span class="tag">Json-server</span>
+        </div>
+            <a href="https://github.com/Jeisoncg5/hotel-carmen-JeisonProject.git" class="project-link">Ver proyecto</a>
+        </div>
+
+        <div class="project-card">
+            <div class="project-num">03</div>
+            <div class="project-title">Gestión de Torneos</div>
+            <div class="project-desc">Este proyecto es una aplicación de Python + JSON para administrar equipos, jugadores, transferencias y torneos de fútbol. Todo el almacenamiento se hace mediante archivos JSON.
+
+    </div>
+            <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">JSON</span>
+            </div>
+            <a href="https://github.com/Jeisoncg5/torneo_futbol.git" class="project-link">Ver proyecto</a>
+        </div>
+        <div class="project-card">
+            <div class="project-num">04</div>
+            <div class="project-title">Sistema de Gestión Inmobiliaria</div>
+            <div class="project-desc">Es un proyecto de base de datos en MySQL para una inmobiliaria. Sirve para administrar propiedades (casas, apartamentos y locales), clientes, contratos de arriendo y venta, pagos, y además incluye auditoría con triggers, roles de usuario (admin, agente y contador) y un evento mensual para generar reportes de pagos pendientes.
+
+    </div>
+            <div class="project-tags">
+            <span class="tag">MySql</span>
+            <span class="tag">SQL</span>
+            </div>
+            <a href="https://github.com/Jeisoncg5/ProyectoMysql-II.git" class="project-link">Ver proyecto</a>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+    CONTACTO — cambia email, LinkedIn y GitHub
+════════════════════════════════════════ -->
+<section id="contact">
+<div class="section-inner">
+    <div class="section-label">Contacto</div>
+    <div class="section-title">Hablemos</div>
+    <div class="contact-inner">
+        <div>
+            <p class="contact-desc">
+            ¿Tienes un proyecto en mente o quieres colaborar? Me encantaría escucharte. Estoy disponible para proyectos freelance y oportunidades full-time.
+            </p>
+            <div class="contact-links">
+            <a href="mailto:Jsnjeison.458@gmail.com" class="contact-link">
+                <div class="contact-link-icon">✉</div>
+                Jsnjeison.458@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/jeison-cristancho-garcia-06a48b35b/" target="_blank" class="contact-link">
+                <div class="contact-link-icon">in</div>
+                linkedin.com/in/JeisonCristancho
+            </a>
+            <a href="https://github.com/Jeisoncg5" target="_blank" class="contact-link">
+                <div class="contact-link-icon">gh</div>
+                github.com/Jeisoncg5
+            </a>
+            </div>
+        </div>
+        <div class="contact-right">
+            <div class="form-group">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-input" placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="tu@email.com">
+            </div>
+            <div class="form-group">
+            <label class="form-label">Mensaje</label>
+            <textarea class="form-textarea" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+            </div>
+            <button class="btn btn-primary" style="width:100%; border:none;">Enviar mensaje</button>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <span class="footer-logo">Jeison Cristancho</span>
+    <span class="footer-text">Diseñado y construido con ♥</span>
+    <span class="footer-text">© 2026 — Todos los derechos reservados</span>
+</footer>
+
+<script>
+  // Cerrar menú móvil al hacer clic en un enlace
+    document.querySelectorAll('#nav-links a').forEach(a => {
+        a.addEventListener('click', () => {
+        document.getElementById('nav-links').classList.remove('open');
+        });
+    });
+</script>
+
+</body>
+</html>
