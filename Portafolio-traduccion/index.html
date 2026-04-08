@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeison Cristancho — Portafolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <a href="#home" class="nav-logo">Jeison Cristancho</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about" data-i18n="nav_about">Sobre mí</a></li>
+    <li><a href="#projects" data-i18n="nav_projects">Proyectos</a></li>
+    <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+  <button class="lang-btn" id="lang-btn" onclick="toggleLang()" title="Switch language">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+    <span id="lang-label">EN</span>
+  </button>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag" data-i18n="hero_tag">Desarrollador Junior</div>
+      <h1><span data-i18n="hero_greeting">Hola, soy</span><br><span class="name-accent">Jeison Cristancho</span></h1>
+      <p class="hero-desc" data-i18n="hero_desc">
+        Construyo experiencias digitales limpias, rápidas y funcionales. Apasionado por el código limpio y las soluciones creativas a problemas complejos.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary" data-i18n="hero_btn_projects">Ver proyectos</a>
+        <a href="#contact" class="btn btn-secondary" data-i18n="hero_btn_contact">Contactarme</a>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <div class="photo-frame">
+        <img src="/img/ImagenNav.png" alt="Jeison Cristancho"
+          style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label" data-i18n="about_label">Sobre mí</div>
+    <div class="section-title" data-i18n="about_title">Quién soy</div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p data-i18n="about_p1">
+          Soy un desarrollador apasionado con experiencia en construir aplicaciones web y móviles. Me especializo en crear productos que combinan funcionalidad técnica con una gran experiencia de usuario.
+        </p>
+        <p data-i18n="about_p2">
+          Cuando no estoy programando, me gusta explorar nuevas tecnologías, contribuir a proyectos open source y aprender constantemente. Creo en el poder del código para solucionar problemas reales.
+        </p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-num">1+</div>
+          <div class="stat-label" data-i18n="stat_exp">Años de experiencia</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">7+</div>
+          <div class="stat-label" data-i18n="stat_projects">Proyectos completados</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">10+</div>
+          <div class="stat-label" data-i18n="stat_clients">Clientes satisfechos</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">5+</div>
+          <div class="stat-label" data-i18n="stat_tech">Tecnologías dominadas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects-bg">
+<div class="section-inner">
+    <div class="section-label" data-i18n="projects_label">Proyectos</div>
+    <div class="section-title" data-i18n="projects_title">Mi trabajo</div>
+    <div class="projects-grid">
+
+    <div class="project-card">
+        <div class="project-num">01</div>
+        <div class="project-title">LuxTime</div>
+        <div class="project-desc" data-i18n="proj1_desc">Maqueta estática del sitio corporativo LuxTime en HTML5 + CSS3 (sin JS ni backend).
+        Responsive (3 breakpoints), layout con Flexbox y componentes visuales simulados (slider, timeline, carruseles, zoom).</div>
+        <div class="project-tags">
+            <span class="tag">Html</span>
+            <span class="tag">Css</span>
+            <span class="tag">GitHub</span>
+        </div>
+        <a href="https://github.com/Jeisoncg5/Proyecto--1-Html-Jeison-Cristancho.git" class="project-link" data-i18n="proj_link">Ver proyecto</a>
+    </div>
+
+    <div class="project-card">
+        <div class="project-num">02</div>
+        <div class="project-title">Hotel El Rincón del Carmen</div>
+        <div class="project-desc" data-i18n="proj2_desc">Sitio web responsive para un hotel con tres vistas principales: Inicio (landing), Disponibilidad/Reservas y Contacto/Ubicación, además de un panel Admin. La app permite listar habitaciones, filtrar por fechas/personas, ver detalles en un modal con carrusel de 3 imágenes y gestionar reservas (crear/cancelar) usando json-server como API simulada.</div>
+        <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Html - Css</span>
+            <span class="tag">Json-server</span>
+        </div>
+        <a href="https://github.com/Jeisoncg5/hotel-carmen-JeisonProject.git" class="project-link" data-i18n="proj_link">Ver proyecto</a>
+    </div>
+
+    <div class="project-card">
+        <div class="project-num">03</div>
+        <div class="project-title">Gestión de Torneos</div>
+        <div class="project-desc" data-i18n="proj3_desc">Este proyecto es una aplicación de Python + JSON para administrar equipos, jugadores, transferencias y torneos de fútbol. Todo el almacenamiento se hace mediante archivos JSON.</div>
+        <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">JSON</span>
+        </div>
+        <a href="https://github.com/Jeisoncg5/torneo_futbol.git" class="project-link" data-i18n="proj_link">Ver proyecto</a>
+    </div>
+
+    <div class="project-card">
+        <div class="project-num">04</div>
+        <div class="project-title">Sistema de Gestión Inmobiliaria</div>
+        <div class="project-desc" data-i18n="proj4_desc">Es un proyecto de base de datos en MySQL para una inmobiliaria. Sirve para administrar propiedades (casas, apartamentos y locales), clientes, contratos de arriendo y venta, pagos, y además incluye auditoría con triggers, roles de usuario (admin, agente y contador) y un evento mensual para generar reportes de pagos pendientes.</div>
+        <div class="project-tags">
+            <span class="tag">MySql</span>
+            <span class="tag">SQL</span>
+        </div>
+        <a href="https://github.com/Jeisoncg5/ProyectoMysql-II.git" class="project-link" data-i18n="proj_link">Ver proyecto</a>
+    </div>
+
+    </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="section-inner">
+    <div class="section-label" data-i18n="contact_label">Contacto</div>
+    <div class="section-title" data-i18n="contact_title">Hablemos</div>
+    <div class="contact-inner">
+        <div>
+            <p class="contact-desc" data-i18n="contact_desc">
+            ¿Tienes un proyecto en mente o quieres colaborar? Me encantaría escucharte. Estoy disponible para proyectos freelance y oportunidades full-time.
+            </p>
+            <div class="contact-links">
+            <a href="mailto:Jsnjeison.458@gmail.com" class="contact-link">
+                <div class="contact-link-icon">✉</div>
+                Jsnjeison.458@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/jeison-cristancho-garcia-06a48b35b/" target="_blank" class="contact-link">
+                <div class="contact-link-icon">in</div>
+                linkedin.com/in/JeisonCristancho
+            </a>
+            <a href="https://github.com/Jeisoncg5" target="_blank" class="contact-link">
+                <div class="contact-link-icon">gh</div>
+                github.com/Jeisoncg5
+            </a>
+            </div>
+        </div>
+        <div class="contact-right">
+            <div class="form-group">
+            <label class="form-label" data-i18n="form_name">Nombre</label>
+            <input type="text" class="form-input" data-i18n-placeholder="form_name_ph" placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+            <label class="form-label" data-i18n="form_email">Email</label>
+            <input type="email" class="form-input" placeholder="tu@email.com">
+            </div>
+            <div class="form-group">
+            <label class="form-label" data-i18n="form_message">Mensaje</label>
+            <textarea class="form-textarea" data-i18n-placeholder="form_message_ph" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+            </div>
+            <button class="btn btn-primary" style="width:100%; border:none;" data-i18n="form_send">Enviar mensaje</button>
+        </div>
+    </div>
+</div>
+</section>
+
+<footer>
+    <span class="footer-logo">Jeison Cristancho</span>
+    <span class="footer-text" data-i18n="footer_built">Diseñado y construido con ♥</span>
+    <span class="footer-text" data-i18n="footer_rights">© 2026 — Todos los derechos reservados</span>
+</footer>
+
+<script>
+  // ── Cerrar menú móvil al hacer clic en un enlace
+  document.querySelectorAll('#nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.getElementById('nav-links').classList.remove('open');
+    });
+  });
+
+  // ── Traducciones
+  const translations = {
+    es: {
+      nav_about: "Sobre mí",
+      nav_projects: "Proyectos",
+      nav_contact: "Contacto",
+      hero_tag: "Desarrollador Junior",
+      hero_greeting: "Hola, soy",
+      hero_desc: "Construyo experiencias digitales limpias, rápidas y funcionales. Apasionado por el código limpio y las soluciones creativas a problemas complejos.",
+      hero_btn_projects: "Ver proyectos",
+      hero_btn_contact: "Contactarme",
+      about_label: "Sobre mí",
+      about_title: "Quién soy",
+      about_p1: "Soy un desarrollador apasionado con experiencia en construir aplicaciones web y móviles. Me especializo en crear productos que combinan funcionalidad técnica con una gran experiencia de usuario.",
+      about_p2: "Cuando no estoy programando, me gusta explorar nuevas tecnologías, contribuir a proyectos open source y aprender constantemente. Creo en el poder del código para solucionar problemas reales.",
+      stat_exp: "Años de experiencia",
+      stat_projects: "Proyectos completados",
+      stat_clients: "Clientes satisfechos",
+      stat_tech: "Tecnologías dominadas",
+      projects_label: "Proyectos",
+      projects_title: "Mi trabajo",
+      proj1_desc: "Maqueta estática del sitio corporativo LuxTime en HTML5 + CSS3 (sin JS ni backend). Responsive (3 breakpoints), layout con Flexbox y componentes visuales simulados (slider, timeline, carruseles, zoom).",
+      proj2_desc: "Sitio web responsive para un hotel con tres vistas principales: Inicio (landing), Disponibilidad/Reservas y Contacto/Ubicación, además de un panel Admin. La app permite listar habitaciones, filtrar por fechas/personas, ver detalles en un modal con carrusel de 3 imágenes y gestionar reservas (crear/cancelar) usando json-server como API simulada.",
+      proj3_desc: "Este proyecto es una aplicación de Python + JSON para administrar equipos, jugadores, transferencias y torneos de fútbol. Todo el almacenamiento se hace mediante archivos JSON.",
+      proj4_desc: "Es un proyecto de base de datos en MySQL para una inmobiliaria. Sirve para administrar propiedades (casas, apartamentos y locales), clientes, contratos de arriendo y venta, pagos, y además incluye auditoría con triggers, roles de usuario (admin, agente y contador) y un evento mensual para generar reportes de pagos pendientes.",
+      proj_link: "Ver proyecto",
+      contact_label: "Contacto",
+      contact_title: "Hablemos",
+      contact_desc: "¿Tienes un proyecto en mente o quieres colaborar? Me encantaría escucharte. Estoy disponible para proyectos freelance y oportunidades full-time.",
+      form_name: "Nombre",
+      form_name_ph: "Tu nombre",
+      form_email: "Email",
+      form_message: "Mensaje",
+      form_message_ph: "Cuéntame sobre tu proyecto...",
+      form_send: "Enviar mensaje",
+      footer_built: "Diseñado y construido con ♥",
+      footer_rights: "© 2026 — Todos los derechos reservados",
+    },
+    en: {
+      nav_about: "About",
+      nav_projects: "Projects",
+      nav_contact: "Contact",
+      hero_tag: "Junior Developer",
+      hero_greeting: "Hi, I'm",
+      hero_desc: "I build clean, fast, and functional digital experiences. Passionate about clean code and creative solutions to complex problems.",
+      hero_btn_projects: "View projects",
+      hero_btn_contact: "Contact me",
+      about_label: "About me",
+      about_title: "Who I am",
+      about_p1: "I'm a passionate developer with experience building web and mobile applications. I specialize in creating products that combine technical functionality with a great user experience.",
+      about_p2: "When I'm not coding, I enjoy exploring new technologies, contributing to open source projects, and constantly learning. I believe in the power of code to solve real-world problems.",
+      stat_exp: "Years of experience",
+      stat_projects: "Completed projects",
+      stat_clients: "Satisfied clients",
+      stat_tech: "Technologies mastered",
+      projects_label: "Projects",
+      projects_title: "My work",
+      proj1_desc: "Static mockup of the LuxTime corporate website in HTML5 + CSS3 (no JS or backend). Responsive (3 breakpoints), Flexbox layout and simulated visual components (slider, timeline, carousels, zoom).",
+      proj2_desc: "Responsive website for a hotel with three main views: Home (landing), Availability/Bookings and Contact/Location, plus an Admin panel. The app allows listing rooms, filtering by date/guests, viewing details in a modal with a 3-image carousel, and managing bookings (create/cancel) using json-server as a mock API.",
+      proj3_desc: "This project is a Python + JSON application to manage teams, players, transfers and football tournaments. All data is stored using JSON files.",
+      proj4_desc: "A MySQL database project for a real estate company. Used to manage properties (houses, apartments and offices), clients, rental and sale contracts, payments, and also includes audit triggers, user roles (admin, agent and accountant) and a monthly event to generate pending payment reports.",
+      proj_link: "View project",
+      contact_label: "Contact",
+      contact_title: "Let's talk",
+      contact_desc: "Have a project in mind or want to collaborate? I'd love to hear from you. I'm available for freelance projects and full-time opportunities.",
+      form_name: "Name",
+      form_name_ph: "Your name",
+      form_email: "Email",
+      form_message: "Message",
+      form_message_ph: "Tell me about your project...",
+      form_send: "Send message",
+      footer_built: "Designed and built with ♥",
+      footer_rights: "© 2026 — All rights reserved",
+    }
+  };
+
+  let currentLang = 'es';
+
+  function applyLang(lang) {
+    const t = translations[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (t[key] !== undefined) el.textContent = t[key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (t[key] !== undefined) el.placeholder = t[key];
+    });
+    document.getElementById('lang-label').textContent = lang === 'es' ? 'EN' : 'ES';
+    document.documentElement.lang = lang;
+  }
+
+  function toggleLang() {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    applyLang(currentLang);
+  }
+</script>
+
+</body>
+</html>
