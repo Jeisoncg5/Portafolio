@@ -37,10 +37,10 @@ Portafolio/
 
 ## Cómo ejecutarlo
 
-1. Abre este link:
+1. Abre este link :
 
 ```bash
-
+https://portafoliojeisoncristancho.netlify.app
 ```
 
 
