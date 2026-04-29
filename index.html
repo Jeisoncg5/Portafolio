@@ -3,87 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tu Nombre — Portafolio</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
-
+<title>Jeison Cristancho — Dev Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Style/style.css">
 </head>
 <body>
 
-<nav>
-  <a href="#home" class="nav-logo">Jeison Cristancho</a>
+<!-- Scanlines overlay -->
+<div class="scanlines"></div>
+<!-- Pixel grid bg -->
+<div class="grid-bg"></div>
+
+<!-- ── NAV ── -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <span class="nav-logo-bracket">[</span>JC<span class="nav-logo-bracket">]</span>
+  </a>
   <ul class="nav-links" id="nav-links">
-    <li><a href="#about">Sobre mí</a></li>
-    <li><a href="#projects">Proyectos</a></li>
-    <li><a href="#contact">Contacto</a></li>
+    <li><a href="#about"><span class="nav-num">01.</span>About</a></li>
+    <li><a href="#skills"><span class="nav-num">02.</span>Skills</a></li>
+    <li><a href="#projects"><span class="nav-num">03.</span>Projects</a></li>
+    <li><a href="#contact"><span class="nav-num">04.</span>Contact</a></li>
   </ul>
-  <button class="nav-toggle" onclick="document.getElementById('nav-links').classList.toggle('open')" aria-label="Menú">
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-
+<!-- ── HERO ── -->
 <section class="hero" id="home">
   <div class="hero-inner">
-    <div>
-      <div class="hero-tag">Desarrollador Junior</div>
-      <h1>Hola, soy<br><span class="name-accent">Jeison Cristancho</span></h1>
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="blink-dot"></span>
+        DEVELOPER ONLINE — STAGE 01
+      </div>
+      <h1 class="hero-title">
+        JEISON<br>
+        <span class="name-accent glitch" data-text="CRISTANCHO">CRISTANCHO</span>
+      </h1>
+      <div class="hero-role">
+        <span class="role-prefix">&gt;&gt; </span>
+        <span class="typed-text" id="typedText"></span>
+        <span class="cursor">_</span>
+      </div>
       <p class="hero-desc">
         Construyo experiencias digitales limpias, rápidas y funcionales. Apasionado por el código limpio y las soluciones creativas a problemas complejos.
       </p>
       <div class="hero-btns">
-        <a href="#projects" class="btn btn-primary">Ver proyectos</a>
-        <a href="#contact" class="btn btn-secondary">Contactarme</a>
+        <a href="#projects" class="btn btn-primary">
+          <span class="btn-icon">▶</span> Ver proyectos
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <span class="btn-icon">✉</span> Contactarme
+        </a>
+      </div>
+      <div class="hero-stats-row">
+        <div class="mini-stat"><span class="mini-num">1+</span><span class="mini-label">YRS EXP</span></div>
+        <div class="mini-stat-divider">|</div>
+        <div class="mini-stat"><span class="mini-num">7+</span><span class="mini-label">PROJECTS</span></div>
+        <div class="mini-stat-divider">|</div>
+        <div class="mini-stat"><span class="mini-num">10+</span><span class="mini-label">CLIENTS</span></div>
       </div>
     </div>
 
-    <div class="hero-photo">
-      <div class="photo-frame">
-        
-          <img src="/img/ImagenNav.png" alt="Tu Nombre"
-            style="width:100%;height:100%;object-fit:cover;display:block;">
-        <!-- <div class="photo-placeholder-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(167,139,250,0.55)" stroke-width="1.5">
-            <circle cx="12" cy="8" r="4"/>
-            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-          </svg> -->
-        </div> 
+    <div class="hero-photo-area">
+      <div class="photo-hud">
+        <div class="hud-corner hud-tl"></div>
+        <div class="hud-corner hud-tr"></div>
+        <div class="hud-corner hud-bl"></div>
+        <div class="hud-corner hud-br"></div>
+        <div class="hud-label">PLAYER_01</div>
+        <div class="photo-frame">
+          <img src="img/ImagenNav.png" alt="Jeison Cristancho" />
+        </div>
+        <div class="hud-hp">
+          <span class="hp-label">HP</span>
+          <div class="hp-bar"><div class="hp-fill"></div></div>
+        </div>
+        <div class="hud-bottom-label">JEISON CRISTANCHO</div>
       </div>
     </div>
   </div>
+
+  <!-- Floating pixel decorations -->
+  <div class="pixel-deco pixel-1"></div>
+  <div class="pixel-deco pixel-2"></div>
+  <div class="pixel-deco pixel-3"></div>
+  <div class="hero-scroll-hint">
+    <span>SCROLL</span>
+    <div class="scroll-arrow">▼</div>
+  </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     SOBRE MÍ — edita textos y cifras
-════════════════════════════════════════ -->
+<!-- ── ABOUT ── -->
 <section id="about">
   <div class="section-inner">
-    <div class="section-label">Sobre mí</div>
-    <div class="section-title">Quién soy</div>
+    <div class="section-header">
+      <div class="section-label">
+        <span class="label-bracket">// </span>ABOUT_ME<span class="label-bracket"> //</span>
+      </div>
+      <div class="section-title">Quién soy</div>
+    </div>
     <div class="about-grid">
-      <div class="about-text">
-        <p>
-          Soy un desarrollador apasionado con experiencia en construir aplicaciones web y móviles. Me especializo en crear productos que combinan funcionalidad técnica con una gran experiencia de usuario.
-        </p>
-        <p>
-          Cuando no estoy programando, me gusta explorar nuevas tecnologías, contribuir a proyectos open source y aprender constantemente. Creo en el poder del código para solucionar problemas reales.
-        </p>
+      <div class="about-text-area">
+        <div class="about-terminal">
+          <div class="terminal-bar">
+            <span class="t-dot t-red"></span>
+            <span class="t-dot t-yellow"></span>
+            <span class="t-dot t-green"></span>
+            <span class="t-title">jeison@portfolio:~</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="t-prompt">$ </span><span class="t-cmd">cat about.txt</span></p>
+            <p class="t-output">Soy un desarrollador apasionado con experiencia en construir aplicaciones web y móviles. Me especializo en crear productos que combinan funcionalidad técnica con una gran experiencia de usuario.</p>
+            <p class="t-output" style="margin-top:16px;">Cuando no estoy programando, me gusta explorar nuevas tecnologías, contribuir a proyectos open source y aprender constantemente. Creo en el poder del código para solucionar problemas reales.</p>
+            <p style="margin-top:16px;"><span class="t-prompt">$ </span><span class="cursor-term">_</span></p>
+          </div>
+        </div>
       </div>
       <div class="about-stats">
-        <div class="stat-card">
-          <div class="stat-num">1+</div>
+        <div class="stat-card" data-reveal>
+          <div class="stat-icon">⚡</div>
+          <div class="stat-num counter" data-target="1">0</div>
+          <div class="stat-plus">+</div>
           <div class="stat-label">Años de experiencia</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-num">7+</div>
+        <div class="stat-card" data-reveal>
+          <div class="stat-icon">🎮</div>
+          <div class="stat-num counter" data-target="7">0</div>
+          <div class="stat-plus">+</div>
           <div class="stat-label">Proyectos completados</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-num">10+</div>
+        <div class="stat-card" data-reveal>
+          <div class="stat-icon">👾</div>
+          <div class="stat-num counter" data-target="10">0</div>
+          <div class="stat-plus">+</div>
           <div class="stat-label">Clientes satisfechos</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-num">5+</div>
+        <div class="stat-card" data-reveal>
+          <div class="stat-icon">🛠</div>
+          <div class="stat-num counter" data-target="12">0</div>
+          <div class="stat-plus">+</div>
           <div class="stat-label">Tecnologías dominadas</div>
         </div>
       </div>
@@ -91,128 +152,384 @@
   </div>
 </section>
 
+<!-- ── SKILLS ── -->
+<section id="skills" class="skills-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">
+        <span class="label-bracket">// </span>SKILLS_LOADOUT<span class="label-bracket"> //</span>
+      </div>
+      <div class="section-title">Mis Tecnologías</div>
+    </div>
 
+    <!-- SLIDER TRACK -->
+    <div class="skills-slider-wrap">
+      <div class="slider-track" id="sliderTrack">
+        <!-- Duplicated for infinite loop -->
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"></div>
+          <span>Python</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#"></div>
+          <span>C#</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"></div>
+          <span>HTML5</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"></div>
+          <span>CSS3</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"></div>
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET"></div>
+          <span>.NET</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"></div>
+          <span>MySQL</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"></div>
+          <span>Git</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter:invert(1)"></div>
+          <span>GitHub</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"></div>
+          <span>Linux</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"></div>
+          <span>Docker</span>
+        </div>
+        <!-- Scrum logo SVG inline -->
+        <div class="skill-chip">
+          <div class="skill-logo scrum-logo">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" fill="#545454"/>
+              <path d="M20 8 C13.4 8 8 13.4 8 20 C8 26.6 13.4 32 20 32 C26.6 32 32 26.6 32 20" stroke="#CFCFCF" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M20 13 C16.1 13 13 16.1 13 20 C13 23.9 16.1 27 20 27 C23.9 27 27 23.9 27 20" stroke="#CFCFCF" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="20" cy="20" r="2.5" fill="#CFCFCF"/>
+              <path d="M29 11 L32 8 M32 8 L28 8 M32 8 L32 12" stroke="#7D7D7D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span>Scrum</span>
+        </div>
+        <!-- n8n -->
+        <div class="skill-chip">
+          <div class="skill-logo n8n-logo">
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="8" fill="#252525"/>
+              <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="'Share Tech Mono', monospace" font-size="12" font-weight="bold" fill="#CFCFCF">n8n</text>
+            </svg>
+          </div>
+          <span>n8n</span>
+        </div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"></div>
+          <span>Python</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#"></div>
+          <span>C#</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"></div>
+          <span>HTML5</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"></div>
+          <span>CSS3</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"></div>
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET"></div>
+          <span>.NET</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"></div>
+          <span>MySQL</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"></div>
+          <span>Git</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter:invert(1)"></div>
+          <span>GitHub</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"></div>
+          <span>Linux</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"></div>
+          <span>Docker</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo scrum-logo">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" fill="#545454"/>
+              <path d="M20 8 C13.4 8 8 13.4 8 20 C8 26.6 13.4 32 20 32 C26.6 32 32 26.6 32 20" stroke="#CFCFCF" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M20 13 C16.1 13 13 16.1 13 20 C13 23.9 16.1 27 20 27 C23.9 27 27 23.9 27 20" stroke="#CFCFCF" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="20" cy="20" r="2.5" fill="#CFCFCF"/>
+              <path d="M29 11 L32 8 M32 8 L28 8 M32 8 L32 12" stroke="#7D7D7D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span>Scrum</span>
+        </div>
+        <div class="skill-chip">
+          <div class="skill-logo n8n-logo">
+            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="8" fill="#252525"/>
+              <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="'Share Tech Mono', monospace" font-size="12" font-weight="bold" fill="#CFCFCF">n8n</text>
+            </svg>
+          </div>
+          <span>n8n</span>
+        </div>
+      </div>
+    </div>
 
-<section id="projects" class="projects-bg">
-<div class="section-inner">
-    <div class="section-label">Proyectos</div>
-    <div class="section-title">Mi trabajo</div>
+    <!-- SKILL CARDS GRID -->
+    <div class="skills-grid">
+      <div class="skill-category-card">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">🖥️</span>
+          <span class="skill-cat-name">Frontend</span>
+          <div class="skill-cat-bar"><div class="skill-cat-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-tags">
+          <span class="stag">HTML5</span>
+          <span class="stag">CSS3</span>
+          <span class="stag">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-category-card">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">⚙️</span>
+          <span class="skill-cat-name">Backend</span>
+          <div class="skill-cat-bar"><div class="skill-cat-fill" style="width:70%"></div></div>
+        </div>
+        <div class="skill-tags">
+          <span class="stag">Python</span>
+          <span class="stag">C#</span>
+          <span class="stag">.NET</span>
+        </div>
+      </div>
+      <div class="skill-category-card">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">🗄️</span>
+          <span class="skill-cat-name">Database</span>
+          <div class="skill-cat-bar"><div class="skill-cat-fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-tags">
+          <span class="stag">MySQL</span>
+          <span class="stag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-category-card">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">🔧</span>
+          <span class="skill-cat-name">DevOps & Tools</span>
+          <div class="skill-cat-bar"><div class="skill-cat-fill" style="width:65%"></div></div>
+        </div>
+        <div class="skill-tags">
+          <span class="stag">Git</span>
+          <span class="stag">GitHub</span>
+          <span class="stag">Linux</span>
+          <span class="stag">Docker</span>
+          <span class="stag">Scrum</span>
+          <span class="stag">n8n</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects" class="projects-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">
+        <span class="label-bracket">// </span>COMPLETED_QUESTS<span class="label-bracket"> //</span>
+      </div>
+      <div class="section-title">Mis Proyectos</div>
+    </div>
     <div class="projects-grid">
 
-    <div class="project-card">
-        <div class="project-num">01</div>
-        <div class="project-title">LuxTime</div>
-        <div class="project-desc">Maqueta estática del sitio corporativo LuxTime en HTML5 + CSS3 (sin JS ni backend).
-        Responsive (3 breakpoints), layout con Flexbox y componentes visuales simulados (slider, timeline, carruseles, zoom).</div>
-        <div class="project-tags">
+      <div class="project-card" data-reveal>
+        <div class="project-card-inner">
+          <div class="project-badge">QUEST 01</div>
+          <div class="project-difficulty">
+            <span class="diff-dot active"></span><span class="diff-dot active"></span><span class="diff-dot"></span>
+            <span class="diff-label">NORMAL</span>
+          </div>
+          <div class="project-title">LuxTime</div>
+          <div class="project-desc">Maqueta estática del sitio corporativo LuxTime en HTML5 + CSS3. Responsive (3 breakpoints), layout con Flexbox y componentes visuales simulados (slider, timeline, carruseles, zoom).</div>
+          <div class="project-tags">
             <span class="tag">Html</span>
             <span class="tag">Css</span>
             <span class="tag">GitHub</span>
+          </div>
+          <a href="https://github.com/Jeisoncg5/Proyecto--1-Html-Jeison-Cristancho.git" class="project-link" target="_blank">
+            <span>Ver proyecto</span> <span class="arrow">→</span>
+          </a>
         </div>
-        <a href="https://github.com/Jeisoncg5/Proyecto--1-Html-Jeison-Cristancho.git" class="project-link">Ver proyecto</a>
-    </div>
+        <div class="project-glow"></div>
+      </div>
 
-    <div class="project-card">
-        <div class="project-num">02</div>
-        <div class="project-title">Hotel El Rincón del Carmen</div>
-        <div class="project-desc">Sitio web responsive para un hotel con tres vistas principales: Inicio (landing), Disponibilidad/Reservas y Contacto/Ubicación, además de un panel Admin. La app permite listar habitaciones, filtrar por fechas/personas, ver detalles en un modal con carrusel de 3 imágenes y gestionar reservas (crear/cancelar) usando json-server como API simulada.</div>
-        <div class="project-tags">
+      <div class="project-card" data-reveal>
+        <div class="project-card-inner">
+          <div class="project-badge">QUEST 02</div>
+          <div class="project-difficulty">
+            <span class="diff-dot active"></span><span class="diff-dot active"></span><span class="diff-dot active"></span>
+            <span class="diff-label">HARD</span>
+          </div>
+          <div class="project-title">Hotel El Rincón del Carmen</div>
+          <div class="project-desc">Sitio web responsive para un hotel con vistas de Inicio, Disponibilidad/Reservas y Contacto. Permite listar habitaciones, filtrar por fechas, ver detalles en modal con carrusel y gestionar reservas via json-server.</div>
+          <div class="project-tags">
             <span class="tag">JavaScript</span>
             <span class="tag">Html - Css</span>
             <span class="tag">Json-server</span>
+          </div>
+          <a href="https://github.com/Jeisoncg5/hotel-carmen-JeisonProject.git" class="project-link" target="_blank">
+            <span>Ver proyecto</span> <span class="arrow">→</span>
+          </a>
         </div>
-            <a href="https://github.com/Jeisoncg5/hotel-carmen-JeisonProject.git" class="project-link">Ver proyecto</a>
-        </div>
+        <div class="project-glow"></div>
+      </div>
 
-        <div class="project-card">
-            <div class="project-num">03</div>
-            <div class="project-title">Gestión de Torneos</div>
-            <div class="project-desc">Este proyecto es una aplicación de Python + JSON para administrar equipos, jugadores, transferencias y torneos de fútbol. Todo el almacenamiento se hace mediante archivos JSON.
-
-    </div>
-            <div class="project-tags">
+      <div class="project-card" data-reveal>
+        <div class="project-card-inner">
+          <div class="project-badge">QUEST 03</div>
+          <div class="project-difficulty">
+            <span class="diff-dot active"></span><span class="diff-dot active"></span><span class="diff-dot"></span>
+            <span class="diff-label">NORMAL</span>
+          </div>
+          <div class="project-title">Gestión de Torneos</div>
+          <div class="project-desc">Aplicación Python + JSON para administrar equipos, jugadores, transferencias y torneos de fútbol. Todo el almacenamiento se hace mediante archivos JSON.</div>
+          <div class="project-tags">
             <span class="tag">Python</span>
             <span class="tag">JSON</span>
-            </div>
-            <a href="https://github.com/Jeisoncg5/torneo_futbol.git" class="project-link">Ver proyecto</a>
+          </div>
+          <a href="https://github.com/Jeisoncg5/torneo_futbol.git" class="project-link" target="_blank">
+            <span>Ver proyecto</span> <span class="arrow">→</span>
+          </a>
         </div>
-        <div class="project-card">
-            <div class="project-num">04</div>
-            <div class="project-title">Sistema de Gestión Inmobiliaria</div>
-            <div class="project-desc">Es un proyecto de base de datos en MySQL para una inmobiliaria. Sirve para administrar propiedades (casas, apartamentos y locales), clientes, contratos de arriendo y venta, pagos, y además incluye auditoría con triggers, roles de usuario (admin, agente y contador) y un evento mensual para generar reportes de pagos pendientes.
+        <div class="project-glow"></div>
+      </div>
 
-    </div>
-            <div class="project-tags">
+      <div class="project-card" data-reveal>
+        <div class="project-card-inner">
+          <div class="project-badge">QUEST 04</div>
+          <div class="project-difficulty">
+            <span class="diff-dot active"></span><span class="diff-dot active"></span><span class="diff-dot active"></span>
+            <span class="diff-label">HARD</span>
+          </div>
+          <div class="project-title">Sistema de Gestión Inmobiliaria</div>
+          <div class="project-desc">Base de datos MySQL para una inmobiliaria. Administra propiedades, clientes, contratos de arriendo y venta, pagos, con auditoría por triggers, roles de usuario y evento mensual para reportes.</div>
+          <div class="project-tags">
             <span class="tag">MySql</span>
             <span class="tag">SQL</span>
-            </div>
-            <a href="https://github.com/Jeisoncg5/ProyectoMysql-II.git" class="project-link">Ver proyecto</a>
+          </div>
+          <a href="https://github.com/Jeisoncg5/ProyectoMysql-II.git" class="project-link" target="_blank">
+            <span>Ver proyecto</span> <span class="arrow">→</span>
+          </a>
         </div>
+        <div class="project-glow"></div>
+      </div>
+
     </div>
-</div>
+  </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-    CONTACTO — cambia email, LinkedIn y GitHub
-════════════════════════════════════════ -->
-<section id="contact">
-<div class="section-inner">
-    <div class="section-label">Contacto</div>
-    <div class="section-title">Hablemos</div>
+<!-- ── CONTACT ── -->
+<section id="contact" class="contact-section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">
+        <span class="label-bracket">// </span>SEND_MESSAGE<span class="label-bracket"> //</span>
+      </div>
+      <div class="section-title">Hablemos</div>
+    </div>
     <div class="contact-inner">
-        <div>
-            <p class="contact-desc">
-            ¿Tienes un proyecto en mente o quieres colaborar? Me encantaría escucharte. Estoy disponible para proyectos freelance y oportunidades full-time.
-            </p>
-            <div class="contact-links">
-            <a href="mailto:Jsnjeison.458@gmail.com" class="contact-link">
-                <div class="contact-link-icon">✉</div>
-                Jsnjeison.458@gmail.com
-            </a>
-            <a href="https://www.linkedin.com/in/jeison-cristancho-garcia-06a48b35b/" target="_blank" class="contact-link">
-                <div class="contact-link-icon">in</div>
-                linkedin.com/in/JeisonCristancho
-            </a>
-            <a href="https://github.com/Jeisoncg5" target="_blank" class="contact-link">
-                <div class="contact-link-icon">gh</div>
-                github.com/Jeisoncg5
-            </a>
+      <div class="contact-left">
+        <p class="contact-desc">
+          ¿Tienes un proyecto en mente o quieres colaborar? Me encantaría escucharte. Estoy disponible para proyectos freelance y oportunidades full-time.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:Jsnjeison.458@gmail.com" class="contact-link">
+            <div class="contact-link-icon">✉</div>
+            <div class="contact-link-info">
+              <span class="contact-link-label">EMAIL</span>
+              <span>Jsnjeison.458@gmail.com</span>
             </div>
+          </a>
+          <a href="https://www.linkedin.com/in/jeison-cristancho-garcia-06a48b35b/" target="_blank" class="contact-link">
+            <div class="contact-link-icon">in</div>
+            <div class="contact-link-info">
+              <span class="contact-link-label">LINKEDIN</span>
+              <span>linkedin.com/in/JeisonCristancho</span>
+            </div>
+          </a>
+          <a href="https://github.com/Jeisoncg5" target="_blank" class="contact-link">
+            <div class="contact-link-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.11.82-.26.82-.57v-2.01c-3.34.73-4.03-1.61-4.03-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.21.69.82.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
+            <div class="contact-link-info">
+              <span class="contact-link-label">GITHUB</span>
+              <span>github.com/Jeisoncg5</span>
+            </div>
+          </a>
         </div>
-        <div class="contact-right">
-            <div class="form-group">
+      </div>
+      <div class="contact-right">
+        <div class="contact-form-card">
+          <div class="form-group">
             <label class="form-label">Nombre</label>
             <input type="text" class="form-input" placeholder="Tu nombre">
-            </div>
-            <div class="form-group">
+          </div>
+          <div class="form-group">
             <label class="form-label">Email</label>
             <input type="email" class="form-input" placeholder="tu@email.com">
-            </div>
-            <div class="form-group">
+          </div>
+          <div class="form-group">
             <label class="form-label">Mensaje</label>
             <textarea class="form-textarea" placeholder="Cuéntame sobre tu proyecto..."></textarea>
-            </div>
-            <button class="btn btn-primary" style="width:100%; border:none;">Enviar mensaje</button>
+          </div>
+          <button class="btn btn-primary" style="width:100%;border:none;cursor:pointer;" id="sendBtn">
+            <span class="btn-icon">▶</span> Enviar mensaje
+          </button>
         </div>
-        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-
+<!-- ── FOOTER ── -->
 <footer>
-    <span class="footer-logo">Jeison Cristancho</span>
-    <span class="footer-text">Diseñado y construido con ♥</span>
-    <span class="footer-text">© 2026 — Todos los derechos reservados</span>
+  <div class="footer-inner">
+    <span class="footer-logo">[ JC ]</span>
+    <span class="footer-text">Diseñado y construido con ♥ por Jeison Cristancho</span>
+    <span class="footer-text">© 2026 — Game Over? Never.</span>
+  </div>
 </footer>
 
-<script>
-  // Cerrar menú móvil al hacer clic en un enlace
-    document.querySelectorAll('#nav-links a').forEach(a => {
-        a.addEventListener('click', () => {
-        document.getElementById('nav-links').classList.remove('open');
-        });
-    });
-</script>
+<!-- Toast notification -->
+<div class="toast" id="toast">✅ ¡Mensaje enviado!</div>
 
+<script src="/js/script.js"></script>
 </body>
 </html>
